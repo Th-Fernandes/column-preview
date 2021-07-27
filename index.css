@@ -1,0 +1,91 @@
+/* === GLOBAL ====================== */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size :62.5%;
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    height: 100vh;
+}
+/* === CARDS SECTION ====================== */
+section.cardGroup {
+    display: flex;
+    align-items: center;
+
+    max-width: min(90rem, 80%);
+}
+
+.cardGroup .card {
+    height: 50rem;
+    padding: 6rem 4rem 3rem 4rem;
+}
+
+.cardGroup .card.sedans {
+    background: var(--Bright-orange);
+}
+
+.cardGroup .card.suvs {
+    background: var(--Dark-cyan);
+}
+
+.cardGroup .card.luxury {
+    background: var(--Very-dark-cyan);
+}
+
+.cardGroup .card article > h2 {
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 5.6rem;
+    margin: 3rem 0;
+    color: white;
+}
+
+.cardGroup .card article > p {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1.5rem;
+    color: hsla(0, 0%, 100%, 0.75);
+
+    margin-bottom: 9rem;
+    height: 9.5rem;
+}
+
+.cardGroup .card button.moreInformation{
+    border: none;
+    border-radius: 1.8rem;
+    
+    width: 50%;
+    height: 4rem;
+
+    background: hsl(0, 0%, 95%);
+    color: rgba(0, 0, 0, 0.493);
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: bold;
+
+    transition: .25s all;
+}
+
+.cardGroup .card button.moreInformation:hover {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    transform: scale(1.1);
+}
+/* === RESPONSIVE ====================== */
+@media (max-width: 800px) {
+    .cardGroup {
+        flex-wrap: wrap;
+        height: 90vh;
+    }
+}
